@@ -1,23 +1,22 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./shared/components/layouts/Navbar";
-import Footer from "./shared/components/layouts/Footer";
+import { HelmetProvider } from "react-helmet-async";
+
 import HomePage from "./pages/HomePage";
+import BaseLayout from "./shared/components/layouts/BaseLayout";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
-    <>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <Routes>
+    <HelmetProvider>
+      <Routes>
+        <Route path="/" element={<BaseLayout />}>
+          <Route index={true} element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/About" element={<About />} />
-         <Route path="/Contacts" element={<Contacts />} />
-         <Route path="/Location" element={<Location />} />
-         <Route path="*" element={<NotFound />} /> */}
-        </Routes>
-      </div>
-      <Footer />
-    </>
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </HelmetProvider>
   );
 };
 export default App;
