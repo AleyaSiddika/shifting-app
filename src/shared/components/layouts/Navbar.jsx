@@ -1,13 +1,21 @@
-// components/Navbar.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const navLinks = [
+    { to: "/", text: "Home" },
+    { to: "/services", text: "Services" },
+    { to: "/about", text: "About Us" },
+    { to: "/contact", text: "Contact" },
+  ];
 
   return (
     <nav className="bg-primary-500 p-4">
@@ -19,66 +27,45 @@ const Navbar = () => {
           Shifting Services
         </Link>
         <div className="hidden md:flex space-x-4">
-          <Link
-            to="/"
-            className="text-white hover:text-secondary-500 transition duration-300"
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className="text-white hover:text-secondary-500 transition duration-300"
-          >
-            Services
-          </Link>
-          <Link
-            to="/about"
-            className="text-white hover:text-secondary-500 transition duration-300"
-          >
-            About Us
-          </Link>
-          <Link
-            to="/contact"
-            className="text-white hover:text-secondary-500 transition duration-300"
-          >
-            Contact
-          </Link>
+          {navLinks.map(({ to, text }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`text-white px-3 py-2 rounded transition duration-300 ${
+                location.pathname === to
+                  ? "bg-secondary-500 hover:text-white"
+                  : "hover:bg-secondary-500 hover:text-white"
+              }`}
+            >
+              {text}
+            </Link>
+          ))}
         </div>
         <div className="md:hidden">
           <button className="text-white" onClick={toggleMenu}>
-            <span className="material-icons">menu</span>
+            {isMenuOpen ? (
+              <XMarkIcon className="h-7 w-7" />
+            ) : (
+              <Bars3Icon className="h-7 w-7" />
+            )}
           </button>
         </div>
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 right-4 bg-primary-500 py-2 px-4 rounded z-50">
-            <Link
-              to="/"
-              className="block text-white mb-2 hover:text-secondary-500 transition duration-300"
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link
-              to="/services"
-              className="block text-white mb-2 hover:text-secondary-500 transition duration-300"
-              onClick={toggleMenu}
-            >
-              Services
-            </Link>
-            <Link
-              to="/about"
-              className="block text-white mb-2 hover:text-secondary-500 transition duration-300"
-              onClick={toggleMenu}
-            >
-              About Us
-            </Link>
-            <Link
-              to="/contact"
-              className="block text-white mb-2 hover:text-secondary-500 transition duration-300"
-              onClick={toggleMenu}
-            >
-              Contact
-            </Link>
+          <div className="md:hidden absolute top-16 right-4 bg-primary-500 rounded z-50">
+            {navLinks.map(({ to, text }) => (
+              <Link
+                key={to}
+                to={to}
+                className={`block text-center text-white px-6 py-2 rounded transition duration-300 ${
+                  location.pathname === to
+                    ? "bg-secondary-500 hover:text-white"
+                    : "hover:bg-secondary-500 hover:text-white"
+                }`}
+                onClick={toggleMenu}
+              >
+                {text}
+              </Link>
+            ))}
           </div>
         )}
       </div>
