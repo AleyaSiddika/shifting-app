@@ -6,6 +6,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import BaseLayout from "./shared/components/layouts/BaseLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
+import ServicePage from "./pages/ServicePage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
         <Route path="/" element={<BaseLayout />}>
           <Route index={true} element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicePage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -1,8 +1,7 @@
 import React from "react";
-import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
 
-const HomePage = () => {
+const ServicePage = () => {
   const servicesData = [
     {
       title: "Van Rental",
@@ -23,8 +22,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Hero />
-
       <section id="services" className="py-16 bg-blue-100">
         <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 space-y-10 md:space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -42,28 +39,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <section className="bg-gray-100 py-10">
-        <div className="container">
-          <h2 className="text-3xl text-center font-bold mb-6">Who Are We</h2>
-        </div>
-      </section>
-
-      <section className="container my-10">
-        <h2 className="text-3xl text-center font-bold mb-6">
-          Customer Feedback
-        </h2>
-      </section>
-
-      <section className="bg-gray-100 py-10">
-        <div className="container">
-          <h2 className="text-3xl text-center font-bold mb-6">
-            Contact Information
-          </h2>
-        </div>
-      </section>
     </>
   );
 };
 
-export default HomePage;
+export default ServicePage;
