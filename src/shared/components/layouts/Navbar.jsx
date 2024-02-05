@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link
           to="/"
-          className="text-white font-bold text-xl hover:text-secondary-500 transition duration-300"
+          className="text-white font-bold text-3xl hover:text-secondary-500 transition duration-300"
         >
           Shifting Services
         </Link>
