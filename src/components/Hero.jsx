@@ -14,9 +14,9 @@ const Hero = () => {
       style={{ backgroundImage: `url(${vanImage})` }}
     >
       <div className="absolute inset-0 bg-black   opacity-60"></div>
-      <div className="relative md:flex">
+      <div className="relative md:flex items-center">
         <div className="md:w-1/2">
-          <div className="container md:ml-12 lg:ml-20 mx-auto flex items-center justify-center min-h-96 md:h-screen relative z-10">
+          <div className="container md:ml-12 lg:ml-20 mx-auto flex items-center justify-center min-h-96 relative z-10">
             <div className="text-center text-white">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider ">
                 Effortless Shifting Services
