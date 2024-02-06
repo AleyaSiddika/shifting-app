@@ -119,7 +119,11 @@ const Navbar = () => {
 
           {/* Small Screen Nav Items */}
           {isMenuOpen && (
-            <div className="md:hidden absolute top-16 right-4 bg-primary-500 rounded z-50">
+            <div
+              className={`md:hidden absolute  right-4 bg-primary-500 rounded z-50 ${
+                isSticky ? "top-14" : "top-24 sm:top-20"
+              }`}
+            >
               {navLinks.map(({ to, text }) => (
                 <Link
                   key={to}

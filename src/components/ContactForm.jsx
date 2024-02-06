@@ -19,7 +19,7 @@ const ContactForm = ({ onSubmit }) => {
 
   return (
     <div className="flex flex-col items-start xl:justify-start 2xl:justify-end xl:px-0 px-4">
-      <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-primary-700 via-purple-600 to-blue-400">
+      <h1 className="text-4xl mx-auto md:text-5xl lg:text-7xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-primary-700 via-purple-600 to-blue-400">
         Let’s Talk
       </h1>
       <div className="w-full 2xl:w-8/12 bg-neutral-200rounded-md p-8 mx-auto lg:mt-16 mt-8">
