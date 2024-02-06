@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
+import Contact from "../components/Contact";
 
 const HomePage = () => {
   const servicesData = [
@@ -25,7 +26,7 @@ const HomePage = () => {
     <>
       <Hero />
 
-      <section id="services" className="py-16 bg-blue-100">
+      <section id="services" className="py-16 bg-primary-100">
         <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 space-y-10 md:space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <h1 className="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">
@@ -56,10 +57,9 @@ const HomePage = () => {
       </section>
 
       <section className="bg-gray-100 py-10">
-        <div className="container">
-          <h2 className="text-3xl text-center font-bold mb-6">
-            Contact Information
-          </h2>
+        <div className="container mx-auto">
+          <h2 className="text-3xl text-center font-bold mb-6">Contact Us</h2>
+          <Contact />
         </div>
       </section>
     </>
