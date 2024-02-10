@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "../shared/components/Container/Container";
-import Title from "../shared/components/Title/Title";
-import Padding from "../shared/components/Container/Padding";
+import Container from "../shared/components/container/Container";
+import Title from "../shared/components/title/Title";
+import Padding from "../shared/components/container/Padding";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
