@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
 import Contact from "../components/Contact";
 import AboutPage from "./AboutPage";
+import OurCustomers from "../components/OurCustomers";
 
 const HomePage = () => {
   const servicesData = [
@@ -46,6 +47,7 @@ const HomePage = () => {
       </section>
 
       <AboutPage />
+      <OurCustomers />
 
       <section className="bg-gray-100 py-10">
         <div className="container mx-auto">
