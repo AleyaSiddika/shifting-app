@@ -67,7 +67,7 @@ const Navbar = () => {
               href="#"
               className="text-white hover:underline flex items-center space-x-2"
             >
-              Sörnäisten rantatie 13 C · Helsinki
+              Toivoniementie · Oulu
             </a>
           </div>
         </div>
