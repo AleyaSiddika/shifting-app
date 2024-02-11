@@ -73,7 +73,7 @@ export default function Location() {
       </div>
       <div className="flex flex-wrap xl:mx-auto xl:container">
       <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2254.8608965699896!2d13.049574491349107!3d55.58702940346596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a183167303b9%3A0x1c2b85e6228dde69!2sThomsons%20v%C3%A4g%2030B%2C%20213%2072%20Malm%C3%B6%2C%20Suecia!5e0!3m2!1ses!2sve!4v1700768346903!5m2!1ses!2sve"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1684.7719538421075!2d25.46933281324195!3d65.02215144298324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46802d58900d5c87%3A0xea4c308155f856dc!2sToivoniementie%201%2C%2090500%20Oulu!5e0!3m2!1sen!2sfi!4v1707666674985!5m2!1sen!2sfi"
             width="1400"
             height="620"
             style={{ border: "0" }}
