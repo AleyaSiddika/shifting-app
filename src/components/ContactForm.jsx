@@ -22,7 +22,7 @@ const ContactForm = ({ onSubmit }) => {
       <h1 className="text-4xl mx-auto md:text-5xl lg:text-7xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-primary-700 via-purple-600 to-blue-400">
         Let’s Talk
       </h1>
-      <div className="w-full 2xl:w-8/12 bg-neutral-200rounded-md p-8 mx-auto lg:mt-16 mt-8">
+      <div className="w-full 2xl:w-8/12 bg-neutral-200 rounded-md p-8 mx-auto lg:mt-16 mt-8">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
